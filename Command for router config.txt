@@ -13,10 +13,24 @@ ruhul(config)#interface gigabitEthernet 0/0
 ruhul(config-if)#ip address 10.10.107.1
 % Incomplete command.
 ruhul(config-if)#ip address 10.10.107.1 255.255.255.0
-ruhul(config-if)#no sh
 ruhul(config-if)#no shutdown
 
 ruhul(config-if)#
 %LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to up
 
 %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to up
+
+ruhul(config-if)#exit
+ruhul(config)#i
+ruhul(config)#int
+ruhul(config)#interface g
+ruhul(config)#interface gigabitEthernet 0/1
+ruhul(config-if)#ip address 10.10.106.2 255.255.255.0
+ruhul(config-if)#no shutdown
+
+ruhul(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+ruhul(config-if)#
