@@ -33,4 +33,16 @@ ruhul(config-if)#
 
 %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
 
-ruhul(config-if)#
+ruhul(config-if)#exit
+ruhul(config)#exit
+ruhul#
+%SYS-5-CONFIG_I: Configured from console by console
+
+ruhul#copy 
+ruhul#copy run
+ruhul#copy running-config start
+ruhul#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+ruhul#
