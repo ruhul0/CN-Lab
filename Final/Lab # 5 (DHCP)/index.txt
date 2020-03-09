@@ -14,3 +14,8 @@ R3(dhcp-config)#dns-server 8.8.8.8
 R3(dhcp-config)#default-router 192.168.30.1
 R3(dhcp-config)#exit
 R3(config)#
+
+//For reserving first 10ip
+R3(config)#ip dhcp ex
+R3(config)#ip dhcp excluded-address 192.168.30.1 192.168.30.10
+R3(config)#
