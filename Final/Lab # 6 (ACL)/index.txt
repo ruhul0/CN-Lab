@@ -43,3 +43,19 @@ R2(config)#interface gig0/1
 	
 R2(config-if)#ip access-group 100 in
 R2(config-if)#
+
+
+
+
+
+R1>enable 
+R1#oc
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Serial0/1/0, changed state to u
+R1#config terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#access-list 100 permit ip 192.168.2.0 0.0.0.255 host 192.168.1.11
+R1(config)#access-list 100 deny ip any host 192.168.1.11
+R1(config)#access-list 100 permit ip any any
+R1(config)#interface gig0/0
+R1(config-if)#ip access-group 100 out
+R1(config-if)#
